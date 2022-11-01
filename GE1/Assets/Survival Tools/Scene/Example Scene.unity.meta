@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:GE1/Assets/Survival Tools/Scene/Example Scene.unity.meta
 guid: ec5ba7a8316d5fd4e811c52bd13e41dd
+========
+guid: 678c52131d557ad4b925d1bf40379a68
+folderAsset: yes
+>>>>>>>> c06c1ad37c41c876138809af70891a821c03d731:GE1/Assets/Flooded_Grounds/Content/Meshes/mBuildings/mLightHouse/LightHouse_A.fbm.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
