@@ -9,20 +9,13 @@ public class Enemy : MonoBehaviour
     public FiniteStateMachine StateMachine { get; private set; }
     public NavMeshAgent navMeshAgent { get; private set; }
     public Animator anim { get; protected set; }
+    public FieldOfView fov { get; private set; }
 
     //Assignables
     [Header("Assignables")]
     public Vector3[] Waypoints;
 
-    //Settings
-    [Header("Settings")]
-    //Field of View
-    [Header("Field Of View")]
-    [SerializeField] private float viewRadius;
-    [SerializeField] private float viewAngle;
-
     //Variables
-    public GameObject player;
     public Vector3 originalPosition { get; private set; }
     public int currentWaypoint { get; private set; }
 
@@ -35,6 +28,7 @@ public class Enemy : MonoBehaviour
         StateMachine = new FiniteStateMachine();
         anim = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        fov = GetComponent<FieldOfView>();
     }
 
     protected virtual void Start()
@@ -61,6 +55,8 @@ public class Enemy : MonoBehaviour
         if (currentWaypoint >= Waypoints.Length)
             currentWaypoint = 0;
     }
+
+    public virtual bool PlayerInView => fov.visibleTargets.Count != 0;
 
     public virtual void SetSpeed(float speed) => navMeshAgent.speed = speed;
 

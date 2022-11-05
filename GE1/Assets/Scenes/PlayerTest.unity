@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2153.5664, g: 2257.873, b: 3280.9414, a: 1}
+  m_IndirectSpecularColor: {r: 2154.9521, g: 2260.7734, b: 3289.6094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -563,10 +563,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -605,7 +605,31 @@ MonoBehaviour:
   - {x: -5, y: 0, z: 5}
   - {x: -5, y: 0, z: -5}
   - {x: 5, y: 0, z: -5}
+  idleStateData: {fileID: 11400000, guid: dcdb4374df683a8429d4fe0cb2b57b21, type: 2}
   patrolStateData: {fileID: 11400000, guid: c2a5ded924ee99240bf9f9472e94ac8d, type: 2}
+  chaseStateData: {fileID: 11400000, guid: dea6e3f9786b5b54aac196a0d676ea11, type: 2}
+  attackStateData: {fileID: 11400000, guid: c787f8b13547c3543baef6a05aac33b2, type: 2}
+--- !u!114 &2005484333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005484325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d1cce7cba86434fa1ae9564145d6ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Radius: 10
+  Angle: 75
+  Interval: 0
+  TargetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  ObstacleMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &2013410473
 GameObject:
   m_ObjectHideFlags: 1
@@ -661,6 +685,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1105423834645317680, guid: 7482d1104e8619a479cee63283275c75, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1105423834645317683, guid: 7482d1104e8619a479cee63283275c75, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -708,6 +736,14 @@ PrefabInstance:
     - target: {fileID: 1105423834645317686, guid: 7482d1104e8619a479cee63283275c75, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105423834645317686, guid: 7482d1104e8619a479cee63283275c75, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105423834645317687, guid: 7482d1104e8619a479cee63283275c75, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7482d1104e8619a479cee63283275c75, type: 3}

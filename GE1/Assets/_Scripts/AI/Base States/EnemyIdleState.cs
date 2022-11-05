@@ -18,7 +18,6 @@ public class EnemyIdleState : EnemyState
         base.Enter();
 
         isIdleTimeOver = false;
-        enemy.SetDestination(enemy.transform.position);
         enemy.SetSpeed(0f);
     }
 

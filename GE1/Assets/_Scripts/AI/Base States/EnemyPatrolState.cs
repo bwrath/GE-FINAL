@@ -22,7 +22,6 @@ public class EnemyPatrolState : EnemyState
         reachedCurrentWaypoint = false;
 
         enemy.navMeshAgent.speed = stateData.PatrolSpeed;
-        enemy.navMeshAgent.stoppingDistance = stateData.StoppingDistance;
 
         waypoints = enemy.Waypoints;
         enemy.SetDestination(enemy.originalPosition + waypoints[enemy.currentWaypoint]);

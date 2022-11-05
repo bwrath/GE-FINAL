@@ -6,5 +6,4 @@ using UnityEngine;
 public class D_PatrolState : ScriptableObject
 {
     public float PatrolSpeed = 3.5f;
-    public float StoppingDistance = 1f;
 }

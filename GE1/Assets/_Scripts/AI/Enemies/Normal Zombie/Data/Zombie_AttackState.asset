@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22199503a84acb46811477082429247, type: 3}
-  m_Name: Zombie_PatrolStateData
+  m_Script: {fileID: 11500000, guid: 5b7852550995b074c8356f5951c26137, type: 3}
+  m_Name: Zombie_AttackState
   m_EditorClassIdentifier: 
-  PatrolSpeed: 2
+  attackCD: 2

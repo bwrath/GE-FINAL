@@ -7,6 +7,8 @@ public class EnemyChaseState : EnemyState
     protected D_ChaseState stateData;
     protected Transform chaseTarget;
 
+    protected float distanceToTarget;
+
     public EnemyChaseState(Enemy enemy, FiniteStateMachine stateMachine, string animBoolName, D_ChaseState stateData) : base(enemy, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -16,8 +18,17 @@ public class EnemyChaseState : EnemyState
     {
         base.Enter();
 
+        chaseTarget ??= enemy.fov.visibleTargets[0]; //The fov system sometimes fails to find the target if they are too near, so a check is done
         enemy.SetDestination(chaseTarget.position);
         enemy.SetSpeed(stateData.ChaseSpeed);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        if (distanceToTarget >= stateData.GiveUpRange)
+            chaseTarget = null;
     }
 
     public override void LogicUpdate()
@@ -25,5 +36,6 @@ public class EnemyChaseState : EnemyState
         base.LogicUpdate();
 
         enemy.SetDestination(chaseTarget.position);
+        distanceToTarget = Vector3.Distance(enemy.transform.position, chaseTarget.position);
     }
 }

@@ -19,5 +19,9 @@ public class Zombie_IdleState : EnemyIdleState
         {
             stateMachine.ChangeState(zombie.patrolState);
         }
+        else if (enemy.PlayerInView)
+        {
+            stateMachine.ChangeState(zombie.chaseState);
+        }
     }
 }
