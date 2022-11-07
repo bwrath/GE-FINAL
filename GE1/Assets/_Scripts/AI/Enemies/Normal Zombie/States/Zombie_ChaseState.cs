@@ -21,10 +21,10 @@ public class Zombie_ChaseState : EnemyChaseState
         }
         else if (distanceToTarget <= stateData.ActionRange)
         {
-            if (Time.time >= zombie.attackState.lastAttackFinishTime + zombie.AttackStateData.attackCD) //CD finished
+            if (Time.time >= zombie.meleeAttackState.lastAttackFinishTime + zombie.MeleeAttackStateData.attackCD) //CD finished
             {
-                zombie.attackState.SetAttackTarget(chaseTarget);
-                stateMachine.ChangeState(zombie.attackState);
+                zombie.meleeAttackState.SetAttackTarget(chaseTarget);
+                stateMachine.ChangeState(zombie.meleeAttackState);
             }
         }
     }

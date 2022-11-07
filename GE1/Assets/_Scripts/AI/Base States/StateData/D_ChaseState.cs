@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newChaseStateData", menuName = "Data/State Data/Chase State")]
 public class D_ChaseState : ScriptableObject
 {
-    public float ChaseSpeed;
-    public float ActionRange;
-    public float GiveUpRange;
+    public float ChaseSpeed = 5f;
+    public float ActionRange = 2.5f;
+    public float GiveUpRange = 20f;
 }

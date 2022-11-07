@@ -7,15 +7,15 @@ public class Zombie : Enemy
     public Zombie_IdleState idleState { get; private set; }
     public Zombie_PatrolState patrolState { get; private set; }
     public Zombie_ChaseState chaseState { get; private set; }
-    public Zombie_AttackState attackState { get; private set; }
+    public Zombie_MeleeAttackState meleeAttackState { get; private set; }
 
     [Header("Scriptable Objects")]
     [SerializeField] private D_IdleState idleStateData;
     [SerializeField] private D_PatrolState patrolStateData;
     [SerializeField] private D_ChaseState chaseStateData;
-    [SerializeField] private D_AttackState attackStateData;
+    [SerializeField] private D_MeleeAttackState meleeAttackStateData;
 
-    public D_AttackState AttackStateData => attackStateData;
+    public D_MeleeAttackState MeleeAttackStateData => meleeAttackStateData;
 
     protected override void Start()
     {
@@ -24,7 +24,7 @@ public class Zombie : Enemy
         idleState = new Zombie_IdleState(this, StateMachine, "move", idleStateData);
         patrolState = new Zombie_PatrolState(this, StateMachine, "move", patrolStateData);
         chaseState = new Zombie_ChaseState(this, StateMachine, "move", chaseStateData);
-        attackState = new Zombie_AttackState(this, StateMachine, "attack", attackStateData);
+        meleeAttackState = new Zombie_MeleeAttackState(this, StateMachine, "meleeAttack", meleeAttackStateData);
 
         StateMachine.Inititalize(patrolState);
     }
@@ -38,6 +38,6 @@ public class Zombie : Enemy
 
     private void AttackAnimationFinishTrigger()
     {
-        attackState.AttackAnimationFinished();
+        meleeAttackState.AttackAnimationFinished();
     }
 }

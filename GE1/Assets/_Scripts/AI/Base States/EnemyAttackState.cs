@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class EnemyAttackState : EnemyState
 {
-    protected D_AttackState stateData;
     protected Transform attackTarget;
 
     protected bool isAttackFinished;
 
-    public float lastAttackFinishTime { get; protected set; }
+    public float lastAttackFinishTime { get; protected set; } = 0f;
 
-    public EnemyAttackState(Enemy enemy, FiniteStateMachine stateMachine, string animBoolName, D_AttackState stateData) : base(enemy, stateMachine, animBoolName)
+    public EnemyAttackState(Enemy enemy, FiniteStateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
-        this.stateData = stateData;
+
+    }
+
+    public override void Enter()
+    {
+        base.Enter();
+
+        isAttackFinished = false;
     }
 
     public override void Exit()

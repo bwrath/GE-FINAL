@@ -15,6 +15,11 @@ public class Enemy : MonoBehaviour
     [Header("Assignables")]
     public Vector3[] Waypoints;
 
+    [Header("Settings")]
+    [Header("Navigation")]
+    public bool RandomizeWaypoints;
+    public float WaypointRange;
+
     //Variables
     public Vector3 originalPosition { get; private set; }
     public int currentWaypoint { get; private set; }
@@ -35,6 +40,17 @@ public class Enemy : MonoBehaviour
     {
         gameStarted = true;
         originalPosition = transform.position;
+
+        if (RandomizeWaypoints)
+        {
+            float randomX, randomZ;
+            for (int i = 0; i < Waypoints.Length; i++)
+            {
+                randomX = Random.Range(-WaypointRange, WaypointRange);
+                randomZ = Random.Range(-WaypointRange, WaypointRange);
+                Waypoints[i] = new Vector3(randomX, 0f, randomZ);
+            }
+        }
     }
 
     protected virtual void Update()
