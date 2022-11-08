@@ -16,10 +16,10 @@ MonoBehaviour:
   YSensitivity: 50
   InvertCameraX: 0
   InvertCameraY: 0
-  WalkForwardSpeed: 4
-  WalkBackwardSpeed: 2
-  StrafeSpeed: 3
-  SprintSpeed: 10
+  WalkForwardSpeed: 10
+  WalkBackwardSpeed: 10
+  StrafeSpeed: 5
+  SprintSpeed: 20
   movementSmoothing: 0.1
   JumpSpeed: 5
   Gravity: -9.8

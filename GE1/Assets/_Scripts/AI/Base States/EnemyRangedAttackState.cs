@@ -40,7 +40,7 @@ public class EnemyRangedAttackState : EnemyAttackState
             if (projectile.TryGetComponent(out projectileRB))
             {
                 projectileRB.useGravity = stateData.AffectedByGravity;
-                projectileRB.AddForce(enemy.transform.forward * stateData.ProjectileForwardForce + enemy.transform.up * stateData.ProjectileUpwardForce, ForceMode.Impulse);
+                projectileRB.AddForce(targetDir * stateData.ProjectileForwardForce + enemy.transform.up * stateData.ProjectileUpwardForce, ForceMode.Impulse);
             }
 
             AttackFinished();

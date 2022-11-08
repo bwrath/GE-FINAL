@@ -17,5 +17,5 @@ MonoBehaviour:
   RangedAttackCD: 3
   RangedAttackPrepareTime: 1
   ProjectileForwardForce: 10
-  ProjectileUpwardForce: 3
+  ProjectileUpwardForce: 2
   AffectedByGravity: 1
