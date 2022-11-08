@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3dde9f0149aa7a47b8cc3a7d0dd11dd, type: 3}
-  m_Name: Tank_ChargeAttackStateData
+  m_Script: {fileID: 11500000, guid: 25955bb6587c3ea47b1a8f1ec4266c3b, type: 3}
+  m_Name: Tank_StunState
   m_EditorClassIdentifier: 
-  ChargeAttackCD: 15
-  ChargeAttackValidRange: 10
-  ChargePrepareTime: 2.5
-  ChargeSpeed: 20
-  MaxChargeDuration: 2
+  StunTime: 5
+  StunBeginEffect: {fileID: 6118936178020438191, guid: 6eb20182034696549965ac3c2080613c, type: 3}
+  StunLoopEffect: {fileID: 0}

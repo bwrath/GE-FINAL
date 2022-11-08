@@ -27,11 +27,4 @@ public class EnemyMeleeAttackState : EnemyAttackState
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(targetDir.x, 0f, targetDir.z));
         enemy.transform.rotation = Quaternion.Slerp(enemy.transform.rotation, lookRotation, Time.deltaTime * 5);
     }
-
-    public override void AttackAnimationFinished()
-    {
-        base.AttackAnimationFinished();
-
-        isAttackFinished = true;
-    }
 }

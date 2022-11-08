@@ -6,6 +6,5 @@ using UnityEngine;
 public class D_ChaseState : ScriptableObject
 {
     public float ChaseSpeed = 5f;
-    public float ActionRange = 2.5f;
     public float GiveUpRange = 20f;
 }

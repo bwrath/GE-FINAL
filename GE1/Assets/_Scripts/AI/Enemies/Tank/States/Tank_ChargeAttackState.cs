@@ -17,7 +17,16 @@ public class Tank_ChargeAttackState : EnemyChargeAttackState
 
         if (isAttackFinished)
         {
-            stateMachine.ChangeState(tank.idleState);
+            if (isCollidingWall)
+            {
+                enemy.SetDestination(enemy.transform.position);
+                enemy.SetSpeed(0f);
+                stateMachine.ChangeState(tank.stunState);
+            }
+            else
+            {
+                stateMachine.ChangeState(tank.chaseState);
+            }
         }
     }
 }

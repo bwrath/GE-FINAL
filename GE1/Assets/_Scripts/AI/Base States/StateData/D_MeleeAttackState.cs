@@ -6,4 +6,5 @@ using UnityEngine;
 public class D_MeleeAttackState : ScriptableObject
 {
     public float attackCD = 2f;
+    public float attackRange = 2f;
 }

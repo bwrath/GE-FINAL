@@ -11,9 +11,14 @@ public class Enemy : MonoBehaviour
     public Animator anim { get; protected set; }
     public FieldOfView fov { get; private set; }
 
+    [Header("Base Data")]
+    [SerializeField] private D_EnemyBase enemyBaseData;
+
     //Assignables
     [Header("Assignables")]
-    public Vector3[] Waypoints;
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private Transform ledgeCheck;
+    [SerializeField] private Vector3[] waypoints;
 
     [Header("Settings")]
     [Header("Navigation")]
@@ -22,6 +27,7 @@ public class Enemy : MonoBehaviour
 
     //Variables
     public Vector3 originalPosition { get; private set; }
+    public Vector3[] Waypoints => waypoints;
     public int currentWaypoint { get; private set; }
 
     private bool gameStarted = false;
@@ -44,11 +50,11 @@ public class Enemy : MonoBehaviour
         if (RandomizeWaypoints)
         {
             float randomX, randomZ;
-            for (int i = 0; i < Waypoints.Length; i++)
+            for (int i = 0; i < waypoints.Length; i++)
             {
                 randomX = Random.Range(-WaypointRange, WaypointRange);
                 randomZ = Random.Range(-WaypointRange, WaypointRange);
-                Waypoints[i] = new Vector3(randomX, 0f, randomZ);
+                waypoints[i] = new Vector3(randomX, 0f, randomZ);
             }
         }
     }
@@ -68,9 +74,13 @@ public class Enemy : MonoBehaviour
     public virtual void WaypointReached()
     {
         currentWaypoint++;
-        if (currentWaypoint >= Waypoints.Length)
+        if (currentWaypoint >= waypoints.Length)
             currentWaypoint = 0;
     }
+
+    public virtual bool DetectingWall => Physics.Raycast(wallCheck.position, transform.forward, enemyBaseData.wallCheckDistance, enemyBaseData.levelMask);
+
+    public virtual bool DetectingLedge => !Physics.Raycast(ledgeCheck.position, Vector3.down, enemyBaseData.ledgeCheckDistance, enemyBaseData.levelMask);
 
     public virtual bool PlayerInView => fov.visibleTargets.Count != 0;
 
@@ -80,23 +90,31 @@ public class Enemy : MonoBehaviour
 
     public virtual void SetStoppingDistance(float distance) => navMeshAgent.stoppingDistance = distance;
 
+    public virtual void AttackAnimationFinishTrigger() { }
+
     private void OnDrawGizmos()
     {
+        //Wall and ledge checks
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(wallCheck.position, wallCheck.position + transform.forward * enemyBaseData.wallCheckDistance);
+        Gizmos.DrawLine(ledgeCheck.position, ledgeCheck.position + Vector3.down * enemyBaseData.ledgeCheckDistance);
+
+        //Waypoints
         if (!gameStarted) originalPosition = transform.position;
 
-        if (Waypoints != null)
+        if (waypoints != null)
         {
-            for (int i = 0; i < Waypoints.Length; i++)
+            for (int i = 0; i < waypoints.Length; i++)
             {
                 // Draw points
                 Gizmos.color = Color.red;
-                Gizmos.DrawWireSphere(originalPosition + Waypoints[i], 0.4f);
+                Gizmos.DrawWireSphere(originalPosition + waypoints[i], 0.4f);
 
                 // Draw lines
                 Gizmos.color = Color.black;
-                if (i < Waypoints.Length)
+                if (i < waypoints.Length)
                 {
-                    Gizmos.DrawLine(originalPosition + Waypoints[i], originalPosition + Waypoints[(i + 1) % Waypoints.Length]);
+                    Gizmos.DrawLine(originalPosition + waypoints[i], originalPosition + waypoints[(i + 1) % waypoints.Length]);
                 }
             }
         }

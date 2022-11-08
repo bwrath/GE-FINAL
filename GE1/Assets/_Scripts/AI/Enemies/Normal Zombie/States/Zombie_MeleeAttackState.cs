@@ -17,7 +17,6 @@ public class Zombie_MeleeAttackState : EnemyMeleeAttackState
 
         if (isAttackFinished)
         {
-            lastAttackFinishTime = Time.time;
             stateMachine.ChangeState(zombie.chaseState);
         }
     }

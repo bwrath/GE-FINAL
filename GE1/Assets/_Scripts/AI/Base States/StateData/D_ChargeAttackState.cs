@@ -6,6 +6,7 @@ using UnityEngine;
 public class D_ChargeAttackState : ScriptableObject
 {
     public float ChargeAttackCD = 5f;
+    public float ChargeAttackValidRange = 10f;
     public float ChargePrepareTime = 2f;
     public float ChargeSpeed = 20f;
     public float MaxChargeDuration = 2f;

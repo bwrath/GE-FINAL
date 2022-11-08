@@ -8,7 +8,7 @@ public class EnemyAttackState : EnemyState
 
     protected bool isAttackFinished;
 
-    public float lastAttackFinishTime { get; protected set; } = 0f;
+    public float lastAttackFinishTime { get; protected set; } = Mathf.NegativeInfinity;
 
     public EnemyAttackState(Enemy enemy, FiniteStateMachine stateMachine, string animBoolName) : base(enemy, stateMachine, animBoolName)
     {
@@ -29,9 +29,10 @@ public class EnemyAttackState : EnemyState
         attackTarget = null;
     }
 
-    public virtual void AttackAnimationFinished()
+    public virtual void AttackFinished()
     {
-
+        isAttackFinished = true;
+        lastAttackFinishTime = Time.time;
     }
 
     public virtual void SetAttackTarget(Transform target) => attackTarget = target;

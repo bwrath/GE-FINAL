@@ -36,8 +36,8 @@ public class Zombie : Enemy
         anim.SetFloat("velocity", navMeshAgent.velocity.magnitude);
     }
 
-    private void AttackAnimationFinishTrigger()
+    public override void AttackAnimationFinishTrigger()
     {
-        meleeAttackState.AttackAnimationFinished();
+        meleeAttackState.AttackFinished();
     }
 }
