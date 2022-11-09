@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/small_town_america/general/materials/road_signs_MaskMap.png.meta
 guid: 774a8bfff4f6fae44b880bad2145c513
+=======
+guid: 5216f41149c49604696bf7a15871d7b4
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/small_town_america/general/materials/road_signs_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

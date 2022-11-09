@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/small_town_america/general/materials/street_decal_2_MaskMap.png.meta
 guid: 338f497c73784224ea2e14a36c513a1b
+=======
+guid: d03136533ac0c81499e9cd4821877c1c
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/small_town_america/general/materials/street_decal_2_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/small_town_america/general/materials/general_damage_ground_3_MaskMap.png.meta
 guid: de089d0b4d854f04c99c76229cf3371e
+=======
+guid: d0afac0d497584a46abf58abaf29b2dc
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/small_town_america/general/materials/general_damage_ground_3_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

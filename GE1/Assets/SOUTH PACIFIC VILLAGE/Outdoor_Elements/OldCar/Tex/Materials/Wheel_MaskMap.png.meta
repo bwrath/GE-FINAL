@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/SOUTH PACIFIC VILLAGE/Outdoor_Elements/OldCar/Tex/Materials/Wheel_MaskMap.png.meta
 guid: d73b1585526e98a4bb47374f21cd14b7
+=======
+guid: 7ec63f3114e9aa94394a0c1d0b65470e
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/SOUTH PACIFIC VILLAGE/Outdoor_Elements/OldCar/Tex/Materials/Wheel_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

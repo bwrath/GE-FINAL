@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/SOUTH PACIFIC VILLAGE/Props/Fruits/Apples/Tex/Materials/Red_Apple_MaskMap.png.meta
 guid: 21f7103bebac0f74f894bbaf932e0a7c
+=======
+guid: e98d871aeb6b21b408f9dc7456fd202d
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/SOUTH PACIFIC VILLAGE/Props/Fruits/Apples/Tex/Materials/Red_Apple_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

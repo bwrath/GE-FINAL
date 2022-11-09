@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/small_town_america/general/materials/general_flagpole_m_MaskMap.png.meta
 guid: 6ed6c8575e1d6ce4da4441aeff343452
+=======
+guid: 8086669d41df80d4282483886bac7620
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/small_town_america/general/materials/general_flagpole_m_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

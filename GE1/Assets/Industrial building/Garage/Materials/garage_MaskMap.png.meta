@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Industrial building/Garage/Materials/garage_MaskMap.png.meta
 guid: a54562631e5ffea459d42fdb939e4f44
+=======
+guid: e3e810afedf5242499f8fa6617d458b1
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Industrial building/Garage/Materials/garage_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/small_town_america/general/materials/sidewalk_markings_MaskMap.png.meta
 guid: 2e8520c565ecbd446bf621f628cb99ae
+=======
+guid: aea1b8131e2f76544b92c20e3af02609
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/small_town_america/general/materials/sidewalk_markings_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/SOUTH PACIFIC VILLAGE/Outdoor_Elements/Rock/SP - rocks/Tex/Materials/rock1_Base_Color_MaskMap.png.meta
 guid: dfe2108c4d62f86449d6db8d8ac0dc51
+=======
+guid: d8260fad1a19ed64ea353b0ac4b36253
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/SOUTH PACIFIC VILLAGE/Outdoor_Elements/Rock/SP - rocks/Tex/Materials/rock1_Base_Color_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/SOUTH PACIFIC VILLAGE/Props/Boxes/Tex/Materials/Box_MaskMap.png.meta
 guid: 097783190bee9904bb882962f46804cd
+=======
+guid: 49f59d06b2c0b7d46be956ae6dc79ca6
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/SOUTH PACIFIC VILLAGE/Props/Boxes/Tex/Materials/Box_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

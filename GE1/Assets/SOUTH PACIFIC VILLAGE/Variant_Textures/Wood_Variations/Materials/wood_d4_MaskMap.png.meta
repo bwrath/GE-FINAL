@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/SOUTH PACIFIC VILLAGE/Variant_Textures/Wood_Variations/Materials/wood_d4_MaskMap.png.meta
 guid: d8619f8752a46bd4896a07b4d70a8942
+=======
+guid: 957f9c526a7e2964f99651ecb986576e
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/SOUTH PACIFIC VILLAGE/Variant_Textures/Wood_Variations/Materials/wood_d4_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

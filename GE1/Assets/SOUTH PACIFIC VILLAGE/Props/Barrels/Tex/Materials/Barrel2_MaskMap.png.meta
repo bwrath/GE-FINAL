@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/SOUTH PACIFIC VILLAGE/Props/Barrels/Tex/Materials/Barrel2_MaskMap.png.meta
 guid: 3153509e907a78040b12dba0cd800a4e
+=======
+guid: 89418d95a29b69f41b1405d87b394b66
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/SOUTH PACIFIC VILLAGE/Props/Barrels/Tex/Materials/Barrel2_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
