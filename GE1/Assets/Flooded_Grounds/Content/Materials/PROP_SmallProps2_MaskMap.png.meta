@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Flooded_Grounds/Content/Materials/PROP_SmallProps2_MaskMap.png.meta
 guid: 9321b0745ca8c7641bbda4a3e70d7b3d
+=======
+guid: 608932c679b4ae24992cdc032d9d7cd1
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Flooded_Grounds/Content/Materials/PROP_SmallProps2_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

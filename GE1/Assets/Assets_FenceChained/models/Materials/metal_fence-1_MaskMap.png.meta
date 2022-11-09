@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Assets_FenceChained/models/Materials/metal_fence-1_MaskMap.png.meta
 guid: 8aa51cbe61dc626499bc46a71a02fca3
+=======
+guid: 95dce036e67ba1e4ea9172a66c380f04
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Assets_FenceChained/models/Materials/metal_fence-1_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Flooded_Grounds/Content/Materials/BLD_Doors1_DetailMap.png.meta
 guid: 3618769aca1aa944089623e08cd5dd8d
+=======
+guid: 0aca3c9d0e2667949911b122a1ee3182
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Flooded_Grounds/Content/Materials/BLD_Doors1_DetailMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

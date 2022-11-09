@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Flooded_Grounds/Content/Materials/PROP_RugsPaintings_DetailMap.png.meta
 guid: ff39287e743b34449bf65d36ac2fd424
+=======
+guid: ea7f759fff867884e91118714ab52cec
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Flooded_Grounds/Content/Materials/PROP_RugsPaintings_DetailMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

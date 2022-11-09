@@ -137,8 +137,13 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   exposure:
+<<<<<<< HEAD
     m_OverrideState: 0
     m_Value: 0
+=======
+    m_OverrideState: 1
+    m_Value: 11
+>>>>>>> Enemy-AI
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -259,7 +264,11 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
+<<<<<<< HEAD
     m_Value: 0.101
+=======
+    m_Value: 0.2
+>>>>>>> Enemy-AI
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -299,10 +308,17 @@ MonoBehaviour:
   active: 1
   skyType:
     m_OverrideState: 1
+<<<<<<< HEAD
     m_Value: 4
   cloudType:
     m_OverrideState: 0
     m_Value: 1
+=======
+    m_Value: 1
+  cloudType:
+    m_OverrideState: 0
+    m_Value: 0
+>>>>>>> Enemy-AI
   skyAmbientMode:
     m_OverrideState: 0
     m_Value: 0

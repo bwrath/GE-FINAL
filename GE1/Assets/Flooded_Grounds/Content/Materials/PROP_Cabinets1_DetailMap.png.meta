@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Flooded_Grounds/Content/Materials/PROP_Cabinets1_DetailMap.png.meta
 guid: ac0ce408496d8fe469ccf8d2e2dca64c
+=======
+guid: 8f5358b270a520d4a87a0e7ae0871bac
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Flooded_Grounds/Content/Materials/PROP_Cabinets1_DetailMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

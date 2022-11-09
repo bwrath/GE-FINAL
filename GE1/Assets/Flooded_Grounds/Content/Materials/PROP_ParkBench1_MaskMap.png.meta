@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Flooded_Grounds/Content/Materials/PROP_ParkBench1_MaskMap.png.meta
 guid: 5d355d541d8a85445a395fdec769681a
+=======
+guid: 31ddf153f09de454fb3b635520550c3b
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Flooded_Grounds/Content/Materials/PROP_ParkBench1_MaskMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

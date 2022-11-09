@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GE1/Assets/Flooded_Grounds/Content/Materials/PROP_FlyingSaucer_DetailMap.png.meta
 guid: af45b829608310d47a88872c19b75a2a
+=======
+guid: 24ee28e856049f74d8462a91e1d15a3b
+>>>>>>> Enemy-AI:GE1/Assets/Imported Assets/Flooded_Grounds/Content/Materials/PROP_FlyingSaucer_DetailMap.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
