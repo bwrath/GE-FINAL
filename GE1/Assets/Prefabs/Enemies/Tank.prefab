@@ -1456,8 +1456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visibleTargets: []
-  Radius: 10
-  Angle: 75
+  Radius: 90
+  Angle: 90
   Interval: 0.2
   TargetMask:
     serializedVersion: 2
@@ -1476,7 +1476,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 5
+  m_Acceleration: 3
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 2
@@ -1529,7 +1529,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1.2}
   m_Center: {x: 0, y: 1, z: 0.5}
 --- !u!1 &3945076435245894484
 GameObject:
