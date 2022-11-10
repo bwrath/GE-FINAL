@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b0706db9ec52b4eb8c84a03b03af91, type: 3}
   m_Name: PlayerSettings
   m_EditorClassIdentifier: 
-  XSensitivity: 50
-  YSensitivity: 50
+  XSensitivity: 20
+  YSensitivity: 20
   InvertCameraX: 0
   InvertCameraY: 0
-  WalkForwardSpeed: 10
-  WalkBackwardSpeed: 10
+  WalkForwardSpeed: 6
+  WalkBackwardSpeed: 6
   StrafeSpeed: 5
-  SprintSpeed: 20
+  SprintSpeed: 10
   movementSmoothing: 0.1
   JumpSpeed: 5
   Gravity: -9.8
