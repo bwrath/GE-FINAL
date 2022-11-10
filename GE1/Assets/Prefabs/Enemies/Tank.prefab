@@ -1238,10 +1238,10 @@ MonoBehaviour:
   Interval: 0.2
   TargetMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
 --- !u!195 &4159842269428733275
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   RandomizeWaypoints: 1
-  WaypointRange: 10
+  WaypointRange: 5
   idleStateData: {fileID: 11400000, guid: e138856192ff1ca46a83ccd53afe4025, type: 2}
   patrolStateData: {fileID: 11400000, guid: 6b37c59b2595d784e9ee31dd0f505ec0, type: 2}
   chaseStateData: {fileID: 11400000, guid: fbfea3a43ee17cb4ab2ba840ab939d13, type: 2}

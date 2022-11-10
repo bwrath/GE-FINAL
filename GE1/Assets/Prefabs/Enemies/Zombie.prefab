@@ -2731,7 +2731,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   RandomizeWaypoints: 1
-  WaypointRange: 10
+  WaypointRange: 5
   idleStateData: {fileID: 11400000, guid: dcdb4374df683a8429d4fe0cb2b57b21, type: 2}
   patrolStateData: {fileID: 11400000, guid: c2a5ded924ee99240bf9f9472e94ac8d, type: 2}
   chaseStateData: {fileID: 11400000, guid: dea6e3f9786b5b54aac196a0d676ea11, type: 2}
@@ -2754,10 +2754,10 @@ MonoBehaviour:
   Interval: 0.2
   TargetMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
 --- !u!1 &7653526283408008552
 GameObject:
   m_ObjectHideFlags: 0
