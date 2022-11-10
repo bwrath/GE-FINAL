@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     //Variables and Properties
     public D_EnemyBase EnemyBaseData => enemyBaseData;
     public int currentHealth { get; private set; }
-    public GameObject HurtParticles { get; private set; }
+    public GameObject HurtParticles => hurtParticles;
     public Vector3 originalPosition { get; private set; }
     public Vector3[] Waypoints => waypoints;
     public int currentWaypoint { get; private set; }
