@@ -15,8 +15,14 @@ public class Tank_ChargeAttackState : EnemyChargeAttackState
     {
         base.LogicUpdate();
 
+        if (isCharging)
+        {
+            tank.EnableHitbox();
+        }
+
         if (isAttackFinished)
         {
+            tank.DisableHitbox();
             if (isCollidingWall)
             {
                 enemy.SetDestination(enemy.transform.position);

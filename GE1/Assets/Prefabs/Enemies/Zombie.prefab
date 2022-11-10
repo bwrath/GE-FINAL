@@ -3377,6 +3377,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  hurtParticles: {fileID: 0}
   RandomizeWaypoints: 1
   WaypointRange: 5
   idleStateData: {fileID: 11400000, guid: dcdb4374df683a8429d4fe0cb2b57b21, type: 2}
@@ -3415,9 +3416,9 @@ BoxCollider:
   m_GameObject: {fileID: 7516435681863400953}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1.2}
   m_Center: {x: 0, y: 1, z: 0.5}
 --- !u!1 &7653526283408008552
 GameObject:

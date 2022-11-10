@@ -464,10 +464,10 @@ MonoBehaviour:
   Interval: 0.2
   TargetMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   ObstacleMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
 --- !u!114 &473872779408627061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +488,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  hurtParticles: {fileID: 0}
   RandomizeWaypoints: 1
   WaypointRange: 10
   idleStateData: {fileID: 11400000, guid: 7ef96e1410e6c2640a1c7fc73c7b0c29, type: 2}

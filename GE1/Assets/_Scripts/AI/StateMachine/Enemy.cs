@@ -20,14 +20,17 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private Transform ledgeCheck;
     [SerializeField] private Vector3[] waypoints;
+    [SerializeField] private GameObject hurtParticles;
 
     [Header("Settings")]
     [Header("Navigation")]
     public bool RandomizeWaypoints;
     public float WaypointRange;
 
-    //Variables
+    //Variables and Properties
+    public D_EnemyBase EnemyBaseData => enemyBaseData;
     public int currentHealth { get; private set; }
+    public GameObject HurtParticles { get; private set; }
     public Vector3 originalPosition { get; private set; }
     public Vector3[] Waypoints => waypoints;
     public int currentWaypoint { get; private set; }
@@ -104,11 +107,6 @@ public class Enemy : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         currentHealth -= damage;
-    }
-
-    public virtual void Die()
-    {
-        ToggleRagdoll(true);
     }
 
     public virtual void ToggleRagdoll(bool toggle)

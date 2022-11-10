@@ -18,6 +18,7 @@ public class Zombie : Enemy
     [SerializeField] private D_DeadState deadStateData;
 
     private BoxCollider hitbox;
+    private bool damaged = false;
 
     public D_MeleeAttackState MeleeAttackStateData => meleeAttackStateData;
 
@@ -57,16 +58,20 @@ public class Zombie : Enemy
             StateMachine.ChangeState(deadState);
     }
 
-    private void EnableHitbox() => hitbox.enabled = true;
+    public void EnableHitbox() => hitbox.enabled = true;
 
-    private void DisableHitbox() => hitbox.enabled = false;
+    public void DisableHitbox()
+    {
+        damaged = false;
+        hitbox.enabled = false;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("damage");
-            GetComponent<IDamageable>()?.TakeDamage(enemyBaseData.damage);
+            damaged = true;
+            other.GetComponent<IDamageable>()?.TakeDamage(enemyBaseData.damage);
         }
     }
 
