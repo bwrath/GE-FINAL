@@ -54,6 +54,8 @@ public class Tank : Enemy
     {
         base.Update();
 
+        Debug.Log(DetectingWall);
+        Debug.Log(DetectingLedge);
         anim.SetFloat("velocity", navMeshAgent.velocity.magnitude);
     }
 

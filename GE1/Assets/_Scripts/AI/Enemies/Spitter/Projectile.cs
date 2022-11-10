@@ -10,9 +10,13 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<IDamageable>()?.TakeDamage(projectileDamage);   
+            other.GetComponent<IDamageable>()?.TakeDamage(projectileDamage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        else if (other.CompareTag("Level"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SetDamage(int damage)
