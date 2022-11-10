@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838b9489ed6de0c40bce0dc1538ad323, type: 3}
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
-  name: 
-  damage: 0
-  maxDistance: 0
-  currentAmmo: 0
-  magSize: 0
-  fireRate: 0
-  reloadTime: 0
+  name: as
+  damage: 30
+  maxDistance: 100
+  currentAmmo: 11
+  magSize: 30
+  fireRate: 200
+  reloadTime: 0.7
   reloading: 0
