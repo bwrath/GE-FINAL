@@ -97,6 +97,7 @@ public class Weapon : MonoBehaviour
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
         if (rb == null) return;
         rb.velocity += _playerCamera.forward * hitForce;
+        getcomponent<IDamageable>()?.Damage();
     }
 
     private IEnumerator ShootingCooldown()
