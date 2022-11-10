@@ -1508,6 +1508,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   hurtParticles: {fileID: 414449635254968730, guid: e218cf80999f98949b015519105ec4c0, type: 3}
+  headShotParticles: {fileID: 1882701015793319297, guid: edf74d7c7ca4fa74998ea0853c9cd981, type: 3}
   RandomizeWaypoints: 1
   WaypointRange: 5
   idleStateData: {fileID: 11400000, guid: e138856192ff1ca46a83ccd53afe4025, type: 2}

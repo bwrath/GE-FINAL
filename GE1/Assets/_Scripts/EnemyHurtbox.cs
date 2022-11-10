@@ -8,15 +8,23 @@ public class EnemyHurtbox : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
-        if (GetComponent<SphereCollider>() != null) damage *= 3; //headshot
-
         enemy = GetComponentInParent<Enemy>();
+
+        if (GetComponent<SphereCollider>() != null) //headshot
+        {
+            damage *= 3;
+            if (enemy.HeadShotParticles != null)
+            {
+                Instantiate(enemy.HeadShotParticles, transform.position, Quaternion.identity);
+            }
+        }
+
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
             if (enemy.HurtParticles != null)
             {
-                Instantiate(enemy.HurtParticles, transform.position, transform.rotation);
+                Instantiate(enemy.HurtParticles, transform.position, Quaternion.identity);
             }
         }
             

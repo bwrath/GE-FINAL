@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform ledgeCheck;
     [SerializeField] private Vector3[] waypoints;
     [SerializeField] private GameObject hurtParticles;
+    [SerializeField] private GameObject headShotParticles;
 
     [Header("Settings")]
     [Header("Navigation")]
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour
     public D_EnemyBase EnemyBaseData => enemyBaseData;
     public int currentHealth { get; private set; }
     public GameObject HurtParticles => hurtParticles;
+    public GameObject HeadShotParticles => headShotParticles;
     public Vector3 originalPosition { get; private set; }
     public Vector3[] Waypoints => waypoints;
     public int currentWaypoint { get; private set; }
