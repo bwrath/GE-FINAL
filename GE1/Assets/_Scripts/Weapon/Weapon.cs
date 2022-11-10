@@ -15,6 +15,7 @@ public class Weapon : MonoBehaviour
     public float animTime;
 
     [Header("Shooting")]
+    public int damage;
     public int maxAmmo;
     public int shotsPerSecond;
     public float reloadSpeed;
@@ -95,6 +96,8 @@ public class Weapon : MonoBehaviour
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
+        hitInfo.transform.GetComponent<IDamageable>()?.TakeDamage(damage);
+
         if (rb == null) return;
         rb.velocity += _playerCamera.forward * hitForce;
     }

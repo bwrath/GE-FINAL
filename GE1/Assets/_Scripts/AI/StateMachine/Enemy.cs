@@ -10,9 +10,10 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent navMeshAgent { get; private set; }
     public Animator anim { get; protected set; }
     public FieldOfView fov { get; private set; }
+    private Rigidbody[] ragdoll;
 
     [Header("Base Data")]
-    [SerializeField] private D_EnemyBase enemyBaseData;
+    [SerializeField] protected D_EnemyBase enemyBaseData;
 
     //Assignables
     [Header("Assignables")]
@@ -26,6 +27,7 @@ public class Enemy : MonoBehaviour
     public float WaypointRange;
 
     //Variables
+    public int currentHealth { get; private set; }
     public Vector3 originalPosition { get; private set; }
     public Vector3[] Waypoints => waypoints;
     public int currentWaypoint { get; private set; }
@@ -40,12 +42,19 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         fov = GetComponent<FieldOfView>();
+        ragdoll = GetComponentsInChildren<Rigidbody>();
+        ToggleRagdoll(false);
+        foreach (var rigidbody in ragdoll)
+        {
+            rigidbody.gameObject.AddComponent<EnemyHurtbox>();
+        }
     }
 
     protected virtual void Start()
     {
         gameStarted = true;
         originalPosition = transform.position;
+        currentHealth = enemyBaseData.maxHealth;
 
         if (RandomizeWaypoints)
         {
@@ -91,6 +100,25 @@ public class Enemy : MonoBehaviour
     public virtual void SetStoppingDistance(float distance) => navMeshAgent.stoppingDistance = distance;
 
     public virtual void AttackAnimationFinishTrigger() { }
+
+    public virtual void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+
+    public virtual void Die()
+    {
+        ToggleRagdoll(true);
+    }
+
+    public virtual void ToggleRagdoll(bool toggle)
+    {
+        foreach (var rigidbody in ragdoll)
+        {
+            rigidbody.isKinematic = !toggle;
+        }
+        anim.enabled = !toggle;
+    }
 
     private void OnDrawGizmos()
     {

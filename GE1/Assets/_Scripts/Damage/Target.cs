@@ -7,7 +7,7 @@ public class Target : MonoBehaviour, IDamageable
 
     public float health;
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0) Destroy(gameObject);

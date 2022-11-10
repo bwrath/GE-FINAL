@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd61c1665619be4ea52714ef4d3cfcc, type: 3}
   m_Name: Tank_BaseData
   m_EditorClassIdentifier: 
+  maxHealth: 120
+  damage: 20
   wallCheckDistance: 2
   ledgeCheckDistance: 0.5
   levelMask:

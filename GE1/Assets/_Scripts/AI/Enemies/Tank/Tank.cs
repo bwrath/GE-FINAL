@@ -10,6 +10,7 @@ public class Tank : Enemy
     public Tank_MeleeAttackState meleeAttackState { get; private set; }
     public Tank_ChargeAttackState chargeAttackState { get; private set; }
     public Tank_StunState stunState { get; private set; }
+    public Tank_DeadState deadState { get; private set; }
 
     [Header("Scriptable Objects")]
     [SerializeField] private D_IdleState idleStateData;
@@ -18,9 +19,20 @@ public class Tank : Enemy
     [SerializeField] private D_MeleeAttackState meleeAttackStateData;
     [SerializeField] private D_ChargeAttackState chargeAttackStateData;
     [SerializeField] private D_StunState stunStateData;
+    [SerializeField] private D_DeadState deadStateData;
 
     public D_MeleeAttackState MeleeAttackStateData => meleeAttackStateData;
     public D_ChargeAttackState ChargeAttackStateData => chargeAttackStateData;
+
+    private BoxCollider hitbox;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        hitbox = GetComponent<BoxCollider>();
+        hitbox.enabled = false;
+    }
 
     protected override void Start()
     {
@@ -32,6 +44,7 @@ public class Tank : Enemy
         meleeAttackState = new Tank_MeleeAttackState(this, StateMachine, "meleeAttack", meleeAttackStateData);
         chargeAttackState = new Tank_ChargeAttackState(this, StateMachine, "chargeAttack", chargeAttackStateData);
         stunState = new Tank_StunState(this, StateMachine, "stun", stunStateData);
+        deadState = new Tank_DeadState(this, StateMachine, "dead", deadStateData);
 
         StateMachine.Inititalize(patrolState);
     }
@@ -43,6 +56,27 @@ public class Tank : Enemy
         Debug.Log(DetectingWall);
         Debug.Log(DetectingLedge);
         anim.SetFloat("velocity", navMeshAgent.velocity.magnitude);
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        base.TakeDamage(damage);
+
+        if (currentHealth <= 0)
+            StateMachine.ChangeState(deadState);
+    }
+
+    private void EnableHitbox() => hitbox.enabled = true;
+
+    private void DisableHitbox() => hitbox.enabled = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("damage");
+            GetComponent<IDamageable>()?.TakeDamage(enemyBaseData.damage);
+        }
     }
 
     public override void AttackAnimationFinishTrigger()

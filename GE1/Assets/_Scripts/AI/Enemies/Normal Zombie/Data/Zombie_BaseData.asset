@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd61c1665619be4ea52714ef4d3cfcc, type: 3}
   m_Name: Zombie_BaseData
   m_EditorClassIdentifier: 
+  maxHealth: 30
+  damage: 10
   wallCheckDistance: 1
   ledgeCheckDistance: 0.5
   levelMask:
