@@ -44,8 +44,11 @@ public class Weapon : MonoBehaviour
     private Vector3 _startPosition;
     private Quaternion _startRotation;
 
+    public AudioSource audioSource;
+    [SerializeField] private AudioSource ReloadSoundEffect;
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         _rb = gameObject.AddComponent<Rigidbody>();
         _rb.mass = 0.1f;
         _ammo = maxAmmo;
@@ -79,6 +82,7 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R) && !_reloading && _ammo < maxAmmo)
         {
+            ReloadSoundEffect.Play();
             StartCoroutine(ReloadCooldown());
         }
 
@@ -93,6 +97,7 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
+        audioSource.Play();
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
@@ -111,6 +116,7 @@ public class Weapon : MonoBehaviour
 
     private IEnumerator ReloadCooldown()
     {
+        ReloadSoundEffect.Play();
         _reloading = true;
         _ammoText.text = "RELOADING";
         _rotationTime = 0f;
