@@ -16,4 +16,4 @@ MonoBehaviour:
   ledgeCheckDistance: 0.5
   levelMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64

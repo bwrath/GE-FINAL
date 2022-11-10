@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1105423833366494846}
   - component: {fileID: 1105423833366494845}
   - component: {fileID: 1105423833366494840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1105423833853459712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 1105423834645317646}
   - component: {fileID: 1105423834645317640}
   - component: {fileID: 1105423834645317647}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,8 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 6ac7b0b5eee74ad4281c67fd74d22183,
-    type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 6ac7b0b5eee74ad4281c67fd74d22183, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
