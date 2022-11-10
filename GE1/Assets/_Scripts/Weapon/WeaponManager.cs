@@ -3,7 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WeaponManager : MonoBehaviour {
+public class WeaponManager : MonoBehaviour
+{
     public float pickupRange;
     public float pickupRadius;
 
@@ -25,44 +26,52 @@ public class WeaponManager : MonoBehaviour {
     private bool _isWeaponHeld;
     private Weapon _heldWeapon;
 
-    private void Update() {
+    private void Update()
+    {
         crosshairImage.gameObject.SetActive(!_isWeaponHeld || !_heldWeapon.Scoping);
-        foreach (var cam in playerCams) {
+        foreach (var cam in playerCams)
+        {
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, _isWeaponHeld && _heldWeapon.Scoping ? scopedFov : defaultFov, fovSmooth * Time.deltaTime);
         }
 
-        if (_isWeaponHeld) {
+        if (_isWeaponHeld)
+        {
             var mouseDelta = -new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             swayHolder.localPosition = Vector3.Lerp(swayHolder.localPosition, Vector3.zero, swaySmooth * Time.deltaTime);
-            swayHolder.localPosition += (Vector3) mouseDelta * swaySize;
-            
-            if (Input.GetKeyDown(KeyCode.Q)) {
+            swayHolder.localPosition += (Vector3)mouseDelta * swaySize;
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
                 _heldWeapon.Drop(playerCamera);
                 _heldWeapon = null;
                 _isWeaponHeld = false;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.E)) {
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
             var hitList = new RaycastHit[256];
             var hitNumber = Physics.CapsuleCastNonAlloc(playerCamera.position,
                 playerCamera.position + playerCamera.forward * pickupRange, pickupRadius, playerCamera.forward,
                 hitList);
-            
+
             var realList = new List<RaycastHit>();
-            for (var i = 0; i < hitNumber; i++) {
+            for (var i = 0; i < hitNumber; i++)
+            {
                 var hit = hitList[i];
                 if (hit.transform.gameObject.layer != weaponLayer) continue;
-                if (hit.point == Vector3.zero) {
+                if (hit.point == Vector3.zero)
+                {
                     realList.Add(hit);
                 }
                 else if (Physics.Raycast(playerCamera.position, hit.point - playerCamera.position, out var hitInfo,
-                    hit.distance + 0.1f) && hitInfo.transform == hit.transform) {
+                    hit.distance + 0.1f) && hitInfo.transform == hit.transform)
+                {
                     realList.Add(hit);
                 }
             }
 
             if (realList.Count == 0) return;
-            
+
             realList.Sort((hit1, hit2) => {
                 var dist1 = GetDistanceTo(hit1);
                 var dist2 = GetDistanceTo(hit2);
@@ -75,7 +84,8 @@ public class WeaponManager : MonoBehaviour {
         }
     }
 
-    private float GetDistanceTo(RaycastHit hit) {
+    private float GetDistanceTo(RaycastHit hit)
+    {
         return Vector3.Distance(playerCamera.position, hit.point == Vector3.zero ? hit.transform.position : hit.point);
     }
 }
