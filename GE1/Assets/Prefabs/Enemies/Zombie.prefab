@@ -3346,7 +3346,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 3
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 2
@@ -3399,8 +3399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visibleTargets: []
-  Radius: 127.4
-  Angle: 183.19
+  Radius: 10
+  Angle: 90
   Interval: 0.2
   TargetMask:
     serializedVersion: 2

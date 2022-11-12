@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour
     private bool gameStarted = false;
     private Vector3 currentVelocity;
 
+    protected Transform player;
+
     //Methods
     protected virtual void Awake()
     {
@@ -60,6 +62,7 @@ public class Enemy : MonoBehaviour
         gameStarted = true;
         originalPosition = transform.position;
         currentHealth = enemyBaseData.maxHealth;
+        player = GameObject.Find("Player").transform;
 
         if (RandomizeWaypoints)
         {

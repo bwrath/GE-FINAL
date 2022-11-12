@@ -38,4 +38,9 @@ public class EnemyChaseState : EnemyState
         enemy.SetDestination(chaseTarget.position);
         distanceToTarget = Vector3.Distance(enemy.transform.position, chaseTarget.position);
     }
+
+    public virtual void SetChaseTarget(Transform target)
+    {
+        chaseTarget = target;
+    }
 }

@@ -47,6 +47,12 @@ public class Spitter : Enemy
     {
         base.TakeDamage(damage);
 
+        if (StateMachine.CurrentState == idleState || StateMachine.CurrentState == patrolState)
+        {
+            chaseState.SetChaseTarget(player);
+            StateMachine.ChangeState(chaseState);
+        }
+
         if (currentHealth <= 0)
             StateMachine.ChangeState(deadState);
     }

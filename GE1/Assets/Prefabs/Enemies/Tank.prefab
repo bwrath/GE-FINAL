@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visibleTargets: []
-  Radius: 90
+  Radius: 10
   Angle: 90
   Interval: 0.2
   TargetMask:
