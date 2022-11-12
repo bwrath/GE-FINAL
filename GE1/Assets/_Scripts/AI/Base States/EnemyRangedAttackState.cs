@@ -43,6 +43,7 @@ public class EnemyRangedAttackState : EnemyAttackState
                 projectileRB.AddForce(targetDir * stateData.ProjectileForwardForce + enemy.transform.up * stateData.ProjectileUpwardForce, ForceMode.Impulse);
             }
 
+            Debug.Log(projectile.transform.position);
             projectile.GetComponent<Projectile>()?.SetDamage(enemy.EnemyBaseData.damage);
 
             AttackFinished();
