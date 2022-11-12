@@ -17,7 +17,7 @@ public class EnemyDeadState : EnemyState
 
         enemy.navMeshAgent.enabled = false;
         enemy.ToggleRagdoll(true);
-        Object.Destroy(enemy, stateData.destroyTime);
+        Object.Destroy(enemy.gameObject, stateData.destroyTime);
     }
 
 }
