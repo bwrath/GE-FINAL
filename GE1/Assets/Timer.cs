@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
 
     }

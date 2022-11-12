@@ -19,6 +19,7 @@ public class Zombie : Enemy
 
     private BoxCollider hitbox;
     private bool damaged = false;
+
     public D_MeleeAttackState MeleeAttackStateData => meleeAttackStateData;
 
     protected override void Awake()
@@ -55,7 +56,6 @@ public class Zombie : Enemy
 
         if (currentHealth <= 0)
             StateMachine.ChangeState(deadState);
-
     }
 
     public void EnableHitbox() => hitbox.enabled = true;
