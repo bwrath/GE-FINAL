@@ -1,26 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60b0706db9ec52b4eb8c84a03b03af91, type: 3}
-  m_Name: PlayerSettings
-  m_EditorClassIdentifier: 
-  XSensitivity: 20
-  YSensitivity: 20
-  InvertCameraX: 0
-  InvertCameraY: 0
-  WalkForwardSpeed: 6
-  WalkBackwardSpeed: 6
-  StrafeSpeed: 5
-  SprintSpeed: 10
-  movementSmoothing: 0.1
-  JumpSpeed: 5
-  Gravity: -9.8
-  MaxFallingSpeed: -30
+version https://git-lfs.github.com/spec/v1
+oid sha256:27a12a00125da86629e1a320d8b0935e1d33960eb72c27d4ccc3d6d4214cbcb7
+size 664

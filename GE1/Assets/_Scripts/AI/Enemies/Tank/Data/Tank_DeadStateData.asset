@@ -1,15 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c9770a42ef4504a824b40d06cc1a1b, type: 3}
-  m_Name: Tank_DeadStateData
-  m_EditorClassIdentifier: 
-  destroyTime: 5
+version https://git-lfs.github.com/spec/v1
+oid sha256:136b39fd018f1c9ce4619775ad582913a7e7aba8cb5286f9698628630c34e73d
+size 424

@@ -1,22 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838b9489ed6de0c40bce0dc1538ad323, type: 3}
-  m_Name: AssaultRifle
-  m_EditorClassIdentifier: 
-  name: as
-  damage: 30
-  maxDistance: 100
-  currentAmmo: 11
-  magSize: 30
-  fireRate: 200
-  reloadTime: 0.7
-  reloading: 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c1e279fede52f7b794fce353ce17c3d3786d3ddac29e67d6117dbb0078b1895
+size 547
