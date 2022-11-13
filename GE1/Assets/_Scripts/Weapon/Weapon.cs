@@ -6,6 +6,8 @@ using Random = UnityEngine.Random;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private LayerMask enemyLayer;
+
     [Header("Throwing")]
     public float throwForce;
     public float throwExtraForce;
@@ -100,9 +102,8 @@ public class Weapon : MonoBehaviour
         audioSource.Play();
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
         transform.localRotation = Quaternion.Euler(transform.localRotation.x - kickbackForce * 15, 0, 0);
-        if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
+        if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range, enemyLayer)) return;
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
-        if (hitInfo.transform.gameObject.CompareTag("Player")) return;
         hitInfo.transform.GetComponent<IDamageable>()?.TakeDamage(damage);
 
         if (rb == null) return;
