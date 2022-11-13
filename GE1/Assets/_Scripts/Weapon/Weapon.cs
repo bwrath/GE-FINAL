@@ -64,7 +64,7 @@ public class Weapon : MonoBehaviour
             _time = Mathf.Clamp(_time, 0f, animTime);
             var delta = -(Mathf.Cos(Mathf.PI * (_time / animTime)) - 1f) / 2f;
             transform.localPosition = Vector3.Lerp(_startPosition, Vector3.zero, delta);
-            transform.localRotation = Quaternion.Lerp(_startRotation, Quaternion.identity, delta);
+            transform.localRotation = Quaternion.Lerp(_startRotation, Quaternion.identity, delta * 20);
         }
         else
         {
@@ -99,8 +99,10 @@ public class Weapon : MonoBehaviour
     {
         audioSource.Play();
         transform.localPosition -= new Vector3(0, 0, kickbackForce);
+        transform.localRotation = Quaternion.Euler(transform.localRotation.x - kickbackForce * 15, 0, 0);
         if (!Physics.Raycast(_playerCamera.position, _playerCamera.forward, out var hitInfo, range)) return;
         var rb = hitInfo.transform.GetComponent<Rigidbody>();
+        if (hitInfo.transform.gameObject.CompareTag("Player")) return;
         hitInfo.transform.GetComponent<IDamageable>()?.TakeDamage(damage);
 
         if (rb == null) return;
